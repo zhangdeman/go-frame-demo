@@ -1,4 +1,4 @@
-package test
+package controller
 
 func TestMethod() map[string]interface{}  {
 	data := make(map[string]string)
