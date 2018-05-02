@@ -11,3 +11,15 @@ func TestMethod() map[string]interface{}  {
 	returnData["data"] = data
 	return returnData
 }
+
+func TestRootMethod() map[string]interface{}  {
+	data := make(map[string]string)
+	data["name"] = "zhangdeman"
+	data["age"] = "22"
+	data["high"] ="180"
+	returnData := make(map[string]interface{})
+	returnData["errCode"] = 200
+	returnData["errMsg"] = "success"
+	returnData["data"] = "测试根域名请求"
+	return returnData
+}
