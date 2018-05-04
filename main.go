@@ -1,29 +1,19 @@
 package main
 
 import (
+	"github.com/zhangdeman/go-framework/core/snowflake"
+	//"github.com/zhangdeman/go-framework/core/conf"
 	"github.com/zhangdeman/go-framework/core/boot"
-	"github.com/zhangdeman/go-framework/core/conf"
-	"config/conf_struct"
-	"fmt"
-	"reflect"
+	//"github.com/zhangdeman/go-framework/core/conf"
 )
 
 func init()  {
 	//注册配置文件路径
-	conf.LoadConfigPath("./src/config")
-	data, _ := conf.LoadConfig("base.yaml", &conf_struct.BaseYaml{})
-
-	value := reflect.ValueOf(data)
-	baseConfig := conf_struct.GetBaseYamlConfig(data)
-
-	fmt.Println("fghjhkgjjkkjkghjghj",baseConfig.Host)
-
-	fmt.Println("main",value,reflect.TypeOf(data))
-
+	//conf.LoadConfigPath("/Users/didi/zhangdeman/demo/src/config")
 	//启动运行服务器
-	boot.RunServer()
+	boot.RunServer("/Users/didi/zhangdeman/demo/src/config")
 }
 
 func main()  {
-
+	snowflake.IdWorkerInstance.SetNextId()
 }

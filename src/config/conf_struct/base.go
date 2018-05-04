@@ -1,11 +1,6 @@
 package conf_struct
 
 type BaseYaml struct {
-	Host string `yaml:"host"`
-	Port string `yaml:"port"`
-	User string `yaml:"user"`
-	Pwd string `yaml:"pwd"`
-	Dbname string `yaml:"dbname"`
 	Env string `yaml:"env"`
 }
 

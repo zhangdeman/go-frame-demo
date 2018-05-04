@@ -1,5 +1,8 @@
 package controller
 
+import "fmt"
+import "github.com/zhangdeman/go-framework/core/snowflake"
+
 func TestMethod() map[string]interface{}  {
 	data := make(map[string]string)
 	data["name"] = "zhangdeman"
@@ -13,6 +16,7 @@ func TestMethod() map[string]interface{}  {
 }
 
 func TestRootMethod() map[string]interface{}  {
+	fmt.Println(snowflake.GlobalLogId)
 	data := make(map[string]string)
 	data["name"] = "zhangdeman"
 	data["age"] = "22"
