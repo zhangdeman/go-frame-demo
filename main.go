@@ -1,10 +1,8 @@
 package main
 
 import (
-	"github.com/zhangdeman/go-framework/core/snowflake"
-	//"github.com/zhangdeman/go-framework/core/conf"
 	"github.com/zhangdeman/go-framework/core/boot"
-	//"github.com/zhangdeman/go-framework/core/conf"
+	//"github.com/zhangdeman/go-framework/core/log"
 )
 
 func init()  {
@@ -15,5 +13,5 @@ func init()  {
 }
 
 func main()  {
-	snowflake.IdWorkerInstance.SetNextId()
+
 }
