@@ -2,11 +2,20 @@ package main
 
 import (
 	"github.com/zhangdeman/go-framework/core/boot"
+	"os"
+	"fmt"
 )
 
 func main() {
-	//注册配置文件路径
-	//conf.LoadConfigPath("/Users/didi/zhangdeman/demo/src/config")
+	var env string
+	cmdParam := os.Args
+	if len(cmdParam) < 2 {
+		env = "dev"
+	} else {
+		env = os.Args[1]
+	}
+
+	fmt.Println("运行环境", env)
 	//启动运行服务器
-	boot.RunServer("/Users/didi/zhangdeman/demo/src/config")
+	boot.RunServer(env, "/Users/didi/zhangdeman/demo/src/config")
 }
