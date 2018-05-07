@@ -2,8 +2,10 @@ package controller
 
 import "fmt"
 import "github.com/zhangdeman/go-framework/core/snowflake"
+import "github.com/zhangdeman/go-framework/core/log"
 
 func TestMethod() map[string]interface{} {
+	log.Trace("qqq")
 	data := make(map[string]string)
 	data["name"] = "zhangdeman"
 	data["age"] = "22"
